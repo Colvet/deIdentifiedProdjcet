@@ -9,22 +9,6 @@
 ## 팀원
 > 김신학, 최민영, 최지훈, 이동욱, 노설
 
-## 전체 서비스 시나리오
-![services](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/services.png)
-
-
-
-## API 형식 출력 시나리오
-+ 1~5번은 시간 부족으로 구현 하지 못함. 추후 보완할 예정
-
-![filetoapi](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/filetoapi.png)
-
-## 서비스 아키텍처
-![Architecture](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/Architecture.png)
-
-## 개발환경 및 사용 프로그램
-![tool](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/tool.png)
-
 ## 서비스
 1. 프론트 및 로그인 서비스(port:8087)
     + 개발자: 이동욱, 노설
@@ -68,7 +52,21 @@
             + 프레임 워크: Spring boot
             + 라이브러리: Spring Web, Lombok, Spring for Apache kafak, json
 
-## Db
+## 전체 서비스 시나리오
+![services](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/services.png)
+
+## API 형식 출력 시나리오
++ 1~5번은 시간 부족으로 구현 하지 못함. 추후 보완할 예정
+
+![filetoapi](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/filetoapi.png)
+
+## 서비스 아키텍처
+![Architecture](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/Architecture.png)
+
+## 개발환경 및 사용 프로그램
+![tool](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/tool.png)
+
+## 데이터베이스
 + Mysql(port: 3306)
     + Table: users, result_log
 + MongoDb(port: 27017)
