@@ -13,14 +13,14 @@
 1. 프론트 및 로그인 서비스(port:8087)
     + 개발자: 이동욱, 노설
     + 역할: 프론트, 회원가입&로그인 서비스
-    + 코드: lsy0566/Front_DS
+    + 코드: lhttps://github.com/lsy0566/Front_DS
     + 도커 이미지: colvet/login-app-service:latest
 
 2. 업로드 서비스(본인 개발)(port:8083)
     + 역할: 업로드 파일 저장, csv 파일 Null값 제거 및 갯수 mongodb 업데이트
     + 개발자: 김신학
-    + 코드: Colvet/django-app-service
-    + 도커 이미지: https://hub.docker.com/r/colvet/djangotest
+    + 코드: https://github.com/Colvet/django-app-service
+    + 도커 이미지: colvet/djangotest
     + 개발 환경 및 사용 라이브러리
         + 개발환경: PyCharm
         + 라이브러리: Django, Djnago-restfreamwork, pandas, pymongo
