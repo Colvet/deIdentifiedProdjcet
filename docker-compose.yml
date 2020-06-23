@@ -1,0 +1,61 @@
+
+version: '2'
+
+services:
+   
+    mongo:
+        image: mongo:latest
+        container_name: mongo
+        ports: 
+            - "27017:27017"
+            
+    mysql:
+        image: mysql
+        container_name: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        ports: 
+            - "3306:3306"
+        
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+            MYSQL_USER: k8suser
+            MYSQL_PASSWORD: k8suser
+            MYSQL_DATABASE: k8sdb 
+
+    # docker exec -it mysql sh
+    # mysql -uroot -p
+    # use k8sdb
+    # CREATE TABLE users ( id INT(255) NOT NULL AUTO_INCREMENT, email VARCHAR(255) NOT NULL, username VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, phoneNumber VARCHAR(255) NOT NULL, isMember INT(3) NOT NULL DEFAULT '1', admin INT(3) UNSIGNED NOT NULL DEFAULT '0', PRIMARY KEY (id), UNIQUE INDEX username (username) );
+
+    django-app-service:
+        image: colvet/djangotest:latest
+        container_name: django-app-service
+        ports: 
+            - "8083:8083"
+        volumes: 
+            - /Users/colvet/Documents/Data:/usr/src/app/data
+        depends_on: 
+            - mysql
+            - mongo
+    
+    login-app-service:
+        image: colvet/login-app-service:latest
+        container_name: login-app-service
+        ports: 
+            - "8087:8087"
+        depends_on: 
+            - mysql
+            - mongo
+        volumes: 
+            - /Users/colvet/Documents/finaldocker:/data
+    dei-service:
+        image: wlgns0719/dei-service:latest
+        container_name: dei-service
+        ports: 
+            - "8085:8085"
+        volumes: 
+            - /Users/colvet/Documents/Data:/data
+        depends_on: 
+            - mysql
+            - mongo
