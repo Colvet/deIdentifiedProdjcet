@@ -22,19 +22,14 @@ services:
             MYSQL_USER: k8suser
             MYSQL_PASSWORD: k8suser
             MYSQL_DATABASE: k8sdb 
-
-    # docker exec -it mysql sh
-    # mysql -uroot -p
-    # use k8sdb
-    # CREATE TABLE users ( id INT(255) NOT NULL AUTO_INCREMENT, email VARCHAR(255) NOT NULL, username VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, phoneNumber VARCHAR(255) NOT NULL, isMember INT(3) NOT NULL DEFAULT '1', admin INT(3) UNSIGNED NOT NULL DEFAULT '0', PRIMARY KEY (id), UNIQUE INDEX username (username) );
-
+    
     django-app-service:
         image: colvet/djangotest:latest
         container_name: django-app-service
         ports: 
             - "8083:8083"
         volumes: 
-            - /Users/colvet/Documents/Data:/usr/src/app/data
+            - /로컬 파일 저장 위치:/usr/src/app/data
         depends_on: 
             - mysql
             - mongo
@@ -48,14 +43,14 @@ services:
             - mysql
             - mongo
         volumes: 
-            - /Users/colvet/Documents/finaldocker:/data
+            - /로컬 파일 저장 위치:/data
     dei-service:
         image: wlgns0719/dei-service:latest
         container_name: dei-service
         ports: 
             - "8085:8085"
         volumes: 
-            - /Users/colvet/Documents/Data:/data
+            - /로컬 파일 저장 위치:/data
         depends_on: 
             - mysql
             - mongo
