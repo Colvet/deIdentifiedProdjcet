@@ -10,18 +10,20 @@
 > 김신학, 최민영, 최지훈, 이동욱, 노설
 
 ## 전체 서비스 시나리오
-![services](/img/services.png)
+![services](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/services.png)
+
+
 
 ## API 형식 출력 시나리오
 + 1~5번은 시간 부족으로 구현 하지 못함. 추후 보완할 예정
 
-![filetoapi](/img/filetoapi.png)
+![filetoapi](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/filetoapi.png)
 
 ## 서비스 아키텍처
-![Architecture](/img/Architecture.png)
+![Architecture](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/Architecture.png)
 
 ## 개발환경 및 사용 프로그램
-![tool](/img/tool.png)
+![tool](https://github.com/Colvet/deIdentifiedProdjcet/blob/master/Img/tool.png)
 
 ## 서비스
 1. 프론트 및 로그인 서비스(port:8087)
@@ -41,7 +43,7 @@
         + Db: mongoDb
 
 3. 비식별 처리 및 검증 서비스(port:8085)
-    + 개발자: 최민영, 최최지훈
+    + 개발자: 최민영, 최지훈
     + 역할: 비식별 처리
     + 코드: https://github.com/griffinGC/DeIdentifier-sixth-sense
     + 도커 이미지: wlgns0719/dei-service:latest
