@@ -13,7 +13,7 @@
 1. 프론트 및 로그인 서비스(port:8087)
     + 개발자: 이동욱, 노설
     + 역할: 프론트, 회원가입&로그인 서비스
-    + 코드: lhttps://github.com/lsy0566/Front_DS
+    + 코드: https://github.com/lsy0566/Front_DS
     + 도커 이미지: colvet/login-app-service:latest
 
 2. 업로드 서비스(본인 개발)(port:8083)
