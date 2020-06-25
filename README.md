@@ -16,7 +16,7 @@
     + 코드: https://github.com/lsy0566/Front_DS
     + 도커 이미지: colvet/login-app-service:latest
 
-2. 업로드 서비스``(본인 개발)``(port:8083)
+2. 업로드 서비스 **(본인 개발)** (port:8083)
     + 역할: 업로드 파일 저장, csv 파일 Null값 제거 및 갯수 mongodb 업데이트
     + 개발자: 김신학
     + 코드: https://github.com/Colvet/django-app-service
@@ -32,7 +32,7 @@
     + 코드: https://github.com/griffinGC/DeIdentifier-sixth-sense
     + 도커 이미지: wlgns0719/dei-service:latest
 
-4. 타서비스(File -> API)와의 연동 서비스``(본인 개발)``
+4. 타서비스(File -> API)와의 연동 서비스 **(본인 개발)**
     + 개발자: 김신학
     + 카프카 서버: kafka&zookeeper/docker-compose.yml -> kafak(port:9092) 1개, zookeeper(port:2181) 1개, topic: file-events
     + Kafka Producer(port:8099)
